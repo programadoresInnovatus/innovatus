@@ -1,0 +1,453 @@
+
+    nav > a:hover{
+        cursor: pointer;
+        color: #2e549b;
+      }
+      div>a {
+  
+        color: #2e549b;
+      }
+  
+      div>a:hover {
+        cursor: pointer;
+        text-decoration: none;
+      }
+  
+      @import url(http://fonts.googleapis.com/css?family=Maven+Pro);
+  
+      .tab-wrap {
+        -webkit-transition: 0.3s box-shadow ease;
+        transition: 0.3s box-shadow ease;
+        border-radius: 6px;
+        width: 1100px;
+        max-width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        position: relative;
+        list-style: none;
+        background-color: rgb(243, 240, 240);
+        /* background-color: green; */
+        margin: 50px 0;
+        /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);*/
+      }
+  
+      /*.tab-wrap:hover {
+      box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
+  }*/
+  
+  
+      .tab:checked:nth-of-type(1)~.tab__content:nth-of-type(1) {
+        opacity: 1;
+        -webkit-transition: 0.5s opacity ease-in, 0.2s transform ease;
+        transition: 0.5s opacity ease-in, 0.2s transform ease;
+        position: relative;
+        top: 0;
+        z-index: 100;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        text-shadow: 0 0 0;
+      }
+  
+      .tab:checked:nth-of-type(2)~.tab__content:nth-of-type(2) {
+        opacity: 1;
+        -webkit-transition: 0.5s opacity ease-in, 0.2s transform ease;
+        transition: 0.5s opacity ease-in, 0.2s transform ease;
+        position: relative;
+        top: 0;
+        z-index: 100;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        text-shadow: 0 0 0;
+      }
+  
+      .tab:checked:nth-of-type(3)~.tab__content:nth-of-type(3) {
+        opacity: 1;
+        -webkit-transition: 0.5s opacity ease-in, 0.2s transform ease;
+        transition: 0.5s opacity ease-in, 0.2s transform ease;
+        position: relative;
+        top: 0;
+        z-index: 100;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        text-shadow: 0 0 0;
+      }
+  
+      .tab:checked:nth-of-type(4)~.tab__content:nth-of-type(4) {
+        opacity: 1;
+        -webkit-transition: 0.5s opacity ease-in, 0.2s transform ease;
+        transition: 0.5s opacity ease-in, 0.2s transform ease;
+        position: relative;
+        top: 0;
+        z-index: 100;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        text-shadow: 0 0 0;
+      }
+  
+      .tab:first-of-type:not(:last-of-type)+label {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+  
+      .tab:not(:first-of-type):not(:last-of-type)+label {
+        border-radius: 0;
+      }
+  
+      .tab:last-of-type:not(:first-of-type)+label {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+  
+      .tab:checked+label {
+        background-color: rgb(243, 240, 240);
+        box-shadow: 0 -1px 0 rgb(243, 240, 240);
+        cursor: default;
+      }
+  
+      .tab:checked+label:hover {
+        box-shadow: 0 -1px 0 #fff inset;
+        background-color: #fff;
+      }
+      /*
+  
+      .tab+label {
+        width: 100%;
+        box-shadow: 0 -1px 0 #eee inset;
+        border-radius: 6px 6px 0 0;
+        cursor: pointer;
+        display: block;
+        text-decoration: none;
+        color: #333;
+        -webkit-box-flex: 3;
+        -webkit-flex-grow: 3;
+        -ms-flex-positive: 3;
+        flex-grow: 3;
+        text-align: left;
+        background-color: #f2f2f2;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        text-align: center;
+        -webkit-transition: 0.3s background-color ease, 0.3s box-shadow ease;
+        transition: 0.3s background-color ease, 0.3s box-shadow ease;
+        height: 50px;
+        box-sizing: border-box;
+        padding: 20px;
+        margin-left: 0%;
+        opacity: 0.5;
+        margin-right: 50px
+      }
+  */
+  .tab-wrap>input {
+        margin-left: 8%;
+      }
+  
+      @media (min-width:768px) {
+  
+        .tab+label {
+          width: auto;
+        }
+      }
+  
+      .tab+label:hover{
+        cursor: pointer;
+        background-color: #f9f9f9;
+        box-shadow: 0 1px 0 #f4f4f4 inset;
+      }
+  
+      .tab+label{
+        padding-left: 5px;
+      }
+  
+  
+  .footer {
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        bottom: 0%;
+        width: 100%;
+        background-color: grey;
+        color: white;
+        text-align: center;
+        height: 4%;
+        font-size: 12px;
+  
+      }
+      .tab__content {
+        padding: 10px 25px;
+        background-color: transparent;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        opacity: 0;
+        left: 0;
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+        border-radius: 6px;
+  
+      }
+  
+      /* Boring Styles */
+      *,
+      *:before,
+      *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+  
+      body {
+        font-family: 'Maven Pro', sans-serif;
+        background-color: #e7e7e7;
+        color: #777;
+        padding: 30px 0;
+        min-width: 350px;
+      }
+  
+      h1,
+      h2 {
+        margin: 0;
+        color: #444;
+        text-align: center;
+      }
+  
+      h2 {
+        font-size: 1em;
+        margin-bottom: 30px;
+      }
+  
+      p {
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+  
+      .container {
+        max-width: 1150px;
+        margin: 0 auto;
+      }
+  
+      .tabs-wrap {
+        margin-top: 40px;
+      }
+  
+      .tab-content .tab-pane {
+        padding: 20px 0;
+      }
+
+      [type="date"] {
+        background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+      }
+
+      [type="date"]::-webkit-inner-spin-button {
+        display: none;
+      }
+
+      [type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 0;
+      }
+
+      .validation input {
+        border: 1px solid #c4c4c4;
+        border-radius: 5px;
+        background-color: #fff;
+        padding: 3px 5px;
+        box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+        width: 190px;
+      }
+
+      div>div a {
+        color: grey;
+      }
+
+      body, html{
+        width: 100%;
+        height: 100%;
+       
+    }
+    
+    
+    nav a{
+        float: right;
+    }
+    .acesso{
+        background-color: #203864;
+        height: 10%;
+        width: 100%;
+    }
+    .botao{
+      background-color: #A34201;  
+      border-radius: 4px;
+      border: none;
+      color: #fff;
+      width: 100%;
+      padding: 10px;
+    }
+    
+    form h1{
+        text-align: center;
+        color: #fff;
+        margin-bottom: 3%;
+    }
+    .acesso form{
+        margin-top: 20%;
+        margin-bottom: 38%;
+        width: 60%;
+    }
+    .acesso form .form-group input{
+        margin-bottom: 30px;
+    }
+    
+    .acesso form p{
+        color: red;
+    }
+    
+    .conteudo{
+        display: flex;
+        flex-wrap: wrap;
+        /* align-content: center; */
+    }
+    
+    .inicio{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .inicio h1{
+        text-align: center;
+        margin-bottom: 3%;
+        font-size: 40px;
+       
+    }
+    
+    .inicio > h1 > span{
+        text-align: center;
+        margin-bottom: 3%;
+        font-size: 40px;
+       
+        color: #C55A11;
+    }
+    .conteudo > a {
+        background-color: #203864;
+        padding-bottom: 7%;
+        padding-top: 6%;
+        margin-bottom: 5%;
+        width: 30%;
+        height: 150px;
+    }
+    .conteudo > a:hover{
+        cursor: pointer;
+        background-color: #C55A11;
+        text-decoration: none;
+        
+    
+    }
+    .conteudo > a:active{
+        background-color: #203864;
+    }
+    
+    .conteudo > a > p{
+      vertical-align: center;
+      text-align: center;
+      color: #fff;
+      font-size: 25px;
+      
+    }
+    
+    .caixa-md{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    footer{
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    footer > span {
+        color: #A6A6A6;
+    }
+    footer > span > span {
+        color: rgb(161, 7, 7);
+    } 
+
+
+    :root {
+      --input-padding-x: .99rem;
+      --input-padding-y: .99rem;
+    }
+    
+    
+    .form-signin {
+      width: 100%;
+      max-width: 420px;
+      padding: 15px;
+      margin-left: -5%;
+      margin-top: -3%;
+    }
+    
+    .form-label-group {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+    
+    .form-label-group > input,
+    .form-label-group > label {
+      padding: var(--input-padding-y) var(--input-padding-x);
+    }
+    
+    .form-label-group > label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      margin-bottom: 0; /* Override default `<label>` margin */
+      line-height: 1.5;
+      font-size: 12px;
+      font-weight: normal;
+      color: #acb0b4;
+      border: 1px solid transparent;
+      border-radius: .25rem;
+      transition: all .1s ease-in-out;
+    }
+    
+    .form-label-group input::-webkit-input-placeholder {
+      color: transparent;
+    }
+    
+    .form-label-group input:-ms-input-placeholder {
+      color: transparent;
+    }
+    
+    .form-label-group input::-ms-input-placeholder {
+      color: transparent;
+    }
+    
+    .form-label-group input::-moz-placeholder {
+      color: transparent;
+    }
+    
+    .form-label-group input::placeholder {
+      color: transparent;
+    }
+    
+    .form-label-group input:not(:placeholder-shown) {
+      padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+      padding-bottom: calc(var(--input-padding-y) / 3);
+    }
+    
+    .form-label-group input:not(:placeholder-shown) ~ label {
+      padding-top: calc(var(--input-padding-y) / 3);
+      padding-bottom: calc(var(--input-padding-y) / 3);
+      font-size: 11px;
+      color: #acb0b4;
+    }
+    
+    
+    
+    
